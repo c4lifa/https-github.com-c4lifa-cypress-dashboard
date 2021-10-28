@@ -1,0 +1,24 @@
+query getProject($projectId: ID!) {
+  project(id: $projectId) {
+    projectId
+    inactivityTimeoutSeconds
+    projectColor
+    hooks {
+      hookId
+      url
+      headers
+      hookEvents
+      hookType
+
+      slackResultFilter
+      slackBranchFilter
+
+      githubContext
+      githubToken
+
+      bitbucketUsername
+      bitbucketToken
+      bitbucketBuildName
+    }
+  }
+}

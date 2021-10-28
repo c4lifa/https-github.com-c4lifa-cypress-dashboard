@@ -1,0 +1,51 @@
+query getInstance($instanceId: ID!) {
+  instance(id: $instanceId) {
+    instanceId
+    runId
+    spec
+    projectId
+    run {
+      runId
+      meta {
+        ciBuildId
+      }
+    }
+    results {
+      error
+      stats {
+        ...AllInstanceStats
+      }
+      tests {
+        ... on InstanceTest {
+          testId
+          title
+          state
+          body
+          displayError
+          attempts {
+            state
+            wallClockDuration
+            wallClockStartedAt
+            error {
+              name
+              message
+              stack
+            }
+          }
+        }
+      }
+      screenshots {
+        testId
+        screenshotId
+        height
+        width
+        screenshotURL
+      }
+      cypressConfig {
+        video
+        videoUploadOnPasses
+      }
+      videoUrl
+    }
+  }
+}

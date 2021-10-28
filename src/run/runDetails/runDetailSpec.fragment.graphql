@@ -1,0 +1,14 @@
+fragment RunDetailSpec on RunSpec {
+  instanceId
+  spec
+  claimedAt
+  machineId
+  groupId
+  results {
+    error
+    retries
+    stats {
+      ...AllInstanceStats
+    }
+  }
+}
