@@ -34,7 +34,7 @@
     "@mui/styles": "^5.0.1",
     "@mui/x-data-grid": "^5.0.0-beta.3",
     "@popperjs/core": "^2.4.0",
-    "sorry-cypress-common": "sorry-cypress/sorry-cypress/packages/common#master",
+    "https://github.com/sorry-cypress/sorry-cypress/packages/common#master": "^1.0.0",
     "bold-ui": "^1.0.0-beta.40",
     "date-fns": "^2.21.3",
     "dotenv": "^8.2.0",
